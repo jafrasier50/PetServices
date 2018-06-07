@@ -1,0 +1,107 @@
+
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #greet {
+        margin-bottom: 20px;
+        color: red;
+        text-align: center;
+      }
+      #text-center{
+        color: blue;
+        text-align: center;
+      }
+      #map {
+        height: 50vh;
+        width: 50vw;
+        
+        padding: 0;
+        margin: auto;
+
+
+      }
+      /* Optional: Makes the sample page fill the window. */
+
+
+  }
+    </style>
+
+    <title>My Geocode App!</title>
+  </head>
+  <script
+    src="https://unpkg.com/axios/dist/axios.min.js">
+  </script>
+
+  <body>
+      <h1 id="greet">Hello Gentlemen and Josh!</h1>
+      <div class= "container">
+
+        <h2 id="text-center">User Info Form</h2>
+
+        <!-- get address -->
+          <div id="location-form">
+            <input type="text" id="userName" class="form-control form-control-lg" placeholder="Enter Name">
+            <input type="text" id="location-input" placeholder="Enter Address" class="form-control form-control-lg">
+
+            <input type="text" id="petType" class="form-control form-control-lg" placeholder="Enter Pet">
+            <input type="text" id="petImage" placeholder="Enter pet image url" class="form-control form-control-lg">
+
+
+            <br>
+            <button type="button" id='submit' class="btn btn-primary btn-block">Submit</button>
+          </div>
+
+        <div class="card-block text-center" id="formatted-address"></div>
+        <div class="card-block text-center" id="address_components"></div>
+        <div class="card-block text-center" id="geometry"></div>
+      <div id="map"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="mapCluster.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+
+    <script
+    async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZk3_wDIHYs9dhafRIcgohlunxKiE1iiw&callback=initMap">
+    </script>
+
+
+
+
+  </body>
+
+
+
+</html>

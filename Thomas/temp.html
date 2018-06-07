@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 40rem;  /* The height is 400 pixels */
+        width: 40rem;  /* The width is the width of the web page */
+       }
+      
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Houston
+  var Houston = {lat: 29.733768, lng: -95.465904};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 10, center: Houston});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: Houston, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZk3_wDIHYs9dhafRIcgohlunxKiE1iiw&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+<style>
+{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("instagram.png")
+}
+}
+</style>

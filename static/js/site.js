@@ -1,6 +1,8 @@
 
 // global variables go here
 const database = firebase.database().ref()
+
+const user_profiles = database.child("user_profiles")
 const auth_system = firebase.auth()
 
 var storage = firebase.storage().ref()
@@ -24,3 +26,4 @@ function home_page_script(user){
     
   }
 }
+

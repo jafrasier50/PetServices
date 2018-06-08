@@ -21,14 +21,31 @@ signupBtn.click(()=>{
   }
 })
 
-
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    
+    add_new_user_proile(user)
+
+    window.location = "user_account.html"
     // ...
   } else {
-    // User is signed out.
-    // ...
+
   }
 });
+
+
+
+
+function add_new_user_proile(user){
+  let new_user_profile = {
+    user:user.uid,
+		first_login: true,
+	}
+	let new_user_key = user_profiles.push().key
+  let updates = {};
+  new_user_profile["pk"]=new_user_key
+  updates[new_user_key] = new_user_profile
+  console.log(updates)
+  user_profiles.update(updates)
+  
+}

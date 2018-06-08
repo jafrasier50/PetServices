@@ -1,0 +1,31 @@
+.form-elegant .font-small {
+  font-size: 0.8rem; }
+
+.form-control .z-depth-1a {
+  -webkit-box-shadow: 0 2px 5px 0  rgba(100, 0, 128, 0.488), 0 4px 12px 0 rgb(128, 0, 128);
+  box-shadow: 0 2px 5px 0   rgba(100, 0, 128, 0.488), 0 4px 12px 0 rgb(128, 0, 128); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(100, 0, 128, 0.488), 0 4px 15px 0 rgb(128, 0, 128);
+  box-shadow: 0 5px 11px 0 rgba(100, 0, 128, 0.488), 0 4px 15px 0 rgb(128, 0, 128); }
+
+  .md-form input::placeholder { 
+    color: white;
+    font-size: 12px;
+    opacity: 1; 
+}
+
+input {
+-moz-user-input:  white;
+border-bottom: 1px solid rgb(128, 0, 113);
+
+}
+
+.form-control:hover .md-form input[type=text]:hover{
+  border-bottom: 1px solid rgb(128, 0, 113);
+}
+
+.md-form input[type=date]:hover, .md-form input[type=datetime-local]:hover, .md-form input[type=email]:hover, .md-form input[type=number]:hover, .md-form input[type=password]:hover, .md-form input[type=search-md]:hover, .md-form input[type=search]:hover, .md-form input[type=tel]:hover, .md-form input[type=text]:hover, .md-form input[type=time]:hover, .md-form input[type=url]:hover, .md-form textarea.md-textarea:hover{
+  border-bottom: 1px solid rgb(128, 0, 113);
+}

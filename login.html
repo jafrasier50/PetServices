@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HOU Pet Service - Home</title>
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
-
-
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css"></link>
 
   </head>
 <body>
@@ -19,28 +19,110 @@
 
 </div>
 
-<div id="login_page">
-  <form>
-    <p class="h4 text-center mb-4">Sign in</p>
+ <!--User Sign-in Form-->
 
-    <!-- Material input email -->
+<section class="form-elegant">
+
+    <!--Form without header-->
+    <div class="card secondary-color">
+
+        <div class="card-body mx-4">
+
+            <!--Header-->
+            <div class="text-center">
+                <h3 class="white-text mb-5"><strong>Sign In</strong></h3>
+            </div>
+
+            <!--Body-->
+            <div class="md-form">
+                <input type="text"  style="color: white; border-bottom: 1px solid rgb(128, 0, 113);" id="emailInput" placeholder="Your email" class="form-control">
+            </div>
+
+            <div class="md-form pb-3">
+                <input type="password" onclick="" style="color: white; border-bottom: 1px solid rgb(128, 0, 113)" id="passInput"  placeholder="Your password" class="form-control">
+                <p class="font-small white-text d-flex justify-content-end">Forgot <a href="#" id="pass_submitBtn" class="blue-text ml-1"> password?</a></p>
+            </div>
+
+            <div class="text-center mb-3">
+                <button type="button" id="login_submitBtn" class="btn purple accent-5 btn-block btn-rounded z-depth-1a">Sign in</button>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer mx-5 pt-3 mb-1">
+            <p class="font-small white-text d-flex justify-content-end">Not a member?<a href="#" id="signup2_submitBtn" class="blue-text ml-1"> Sign up</a></p>
+        </div>
+
+    </div>
+
+    </section>
+
+    <!--Forget Password Form-->
+
+   
+    <div class="media">
+        <img class="d-flex mr-3" src="login_photo.jpg" width="50px" height="50px" alt="We Love Houston!">
+        <div class="media-body">
+            <h5 class="pt-1 pb-1 font-weight-bold">Bringing Houston's animal community closer together than ever.</h5>
+            We here at Houston's Pet service hub want to connect pet owners and caregivers closer than ever before.
+            By allowing our users to post their request, and allowing others to reach out and fullfil them, all within the Houston area.
+        </div>
+    </div>
+    
+
+    <!--User Registration Form-->
+
+    <section class="form-elegant">
+
+        <!--Form without header-->
+        <div class="card secondary-color">
+    
+            <div class="card-body mx-4">
+    
+                <!--Header-->
+                <div class="text-center">
+                    <h3 class="white-text mb-5"><strong>Sign Up</strong></h3>
+                </div>
+    
+                <!--Body-->
+                <div class="md-form">
+                    <input type="text"  style="color: white; border-bottom: 1px solid rgb(128, 0, 113);" id="nameInput" placeholder="Your full name" class="form-control">
+                </div>
+
+                <div class="md-form">
+                    <input type="text"  style="color: white; border-bottom: 1px solid rgb(128, 0, 113);" id="email2Input" placeholder="Your email" class="form-control">
+                </div>
+    
+                <div class="md-form">
+                    <input type="password" style="color: white; border-bottom: 1px solid rgb(128, 0, 113);" id="pass1Input"  placeholder="Your password" class="form-control">
+                </div>
+
+                <div class="md-form">
+                    <input type="password" style="color: white; border-bottom: 1px solid rgb(128, 0, 113);" id="pass2Input"  placeholder="Your password (again!)" class="form-control">
+                </div>
+    
+                <div class="text-center mb-3">
+                    <button type="button" id="signup_submitBtn" class="btn purple accent-5 btn-block btn-rounded z-depth-1a">Sign in</button>
+                </div>
+
+            </div>
+    
+    
+            <!--Footer-->
+            <div class="modal-footer mx-5 pt-3 mb-1">
+                <p class="font-small white-text d-flex justify-content-end">Already a member?<a href="#" id="login2_submitBtn" class="blue-text ml-1"> Sign in</a></p>
+            </div>
+    
+        </div>
+    
+        </section>
+
+        <!-- Forgot Password  -->
     <div class="md-form">
-        <i class="fa fa-envelope prefix grey-text"></i>
-        <input type="email" id="emailInput" class="form-control">
-        <label for="emailInput">Your email</label>
-    </div>
-
-    <!-- Material input password -->
-    <div class="md-form">
-        <i class="fa fa-lock prefix grey-text"></i>
-        <input type="password" id="passInput" class="form-control">
-        <label for="passInput">Your password</label>
-    </div>
-
-    <div class="text-center mt-4">
-        <button class="btn btn-default" id="loginBtn" type="button">Login</button>
-    </div>
-</form>
+    <h2 class=
+    <i class="fa fa-user prefix"></i>
+    <input type="text" id="inputIconEx2" class="form-control">
+    <label for="inputIconEx2">E-mail address</label>
 </div>
 
 </body>

@@ -18,7 +18,7 @@
 <!-- Nav-bar -->
 <div id="nav_bar">
 <nav class="navbar navbar-expand-lg navbar-dark secondary-color">
-  <a class="navbar-brand" href=""index.html"">Houston's Pet Service Hub</a>
+  <a class="navbar-brand" href="index.html">Houston's Pet Service Hub</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
   aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
 </nav>
 </div>
 
-<div class="container" id="login_page">
+<div class="container" id="registeration_page">
 
 
     
@@ -46,33 +46,31 @@
         <div class="card-body">
           
           <!--Header-->
-          <div class="form-header rounded login-header">
-            <h3><i class="fa fa-lock"></i> Login:</h3>
+          <div class="form-header warm-flame-gradient rounded login-header">
+            <h3><i class="fa fa-user-plus"></i> Sign up:</h3>
           </div>
           
           <!-- Default input email -->
-          <label for="emailInput" class="grey-text font-weight-light">Your email</label>
+          <label for="emailInput" class="grey-text font-weight-light">Email Address</label>
           <input type="email" id="emailInput" class="form-control">
           
           <br>
           
           <!-- Default input password -->
-          <label for="passInput" class="grey-text font-weight-light">Your password</label>
+          <label for="passInput" class="grey-text font-weight-light">Password</label>
           <input type="password" id="passInput" class="form-control">
-          
+          <br>
+          <label for="confirm_passInput" class="grey-text font-weight-light">Re-enter Password</label>
+          <input type="password" id="confirm_passInput" class="form-control">
+
+
           <div class="text-center mt-4">
-            <button class="btn waves-effect waves-light login-btn" id="loginBtn" type="button">Login</button>
+            <button class="btn btn-deep-orange waves-effect waves-light" id="signupBtn" type="button">Sign Up</button>
           </div>
           
         </div>
 
-        <!--Footer-->
-        <div class="modal-footer">
-          <div class="options font-weight-light">
-            <p>Not a member? <a href="registeration.html">Sign Up</a></p>
-            
-          </div>
-        </div>
+     
 
       </div>
       <!-- Grid column -->
@@ -114,5 +112,5 @@
   </script>
   <!-- Custom site JS -->
   <script src="static/js/site.js"></script>
-  <script src="static/js/login.js"></script>
+  <script src="static/js/signup.js"></script>
 </html>

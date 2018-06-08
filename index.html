@@ -100,23 +100,33 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js">
-	</script> 
-	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js">
-	</script> 
-	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js">
-	</script> 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
-	</script> 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js">
-	</script> 
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
-	</script> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script> 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
-	</script> 
-	<script src="static/js/site.js">
-	</script>
+
 </body>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- Jquery Cdn -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCQ8zPyKTCBUnbgTUn3AFtov-gNpzNoRXc",
+    authDomain: "petservice-11905.firebaseapp.com",
+    databaseURL: "https://petservice-11905.firebaseio.com",
+    projectId: "petservice-11905",
+    storageBucket: "petservice-11905.appspot.com",
+    messagingSenderId: "261768666522"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <!-- Custom site JS -->
+  <script src="static/js/site.js"></script>
 </html>

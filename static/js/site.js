@@ -30,7 +30,7 @@ function init_firebase(){
     if (user) {
       // User is signed in.
       console.log(user.email)
-   
+
       console.log("User loged in")
     } else {
       // User is signed out.
@@ -60,9 +60,9 @@ function init_nav_bar(){
   </li>
   </div>
   </li>
-  
+
   </ul>
-  
-  </div> 
+
+  </div>
   </nav>`
 }

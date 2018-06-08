@@ -12,6 +12,8 @@ firebase.initializeApp(config)
 
 // global variables go here
 const database = firebase.database().ref()
+
+const user_profiles = database.child("user_profiles")
 const auth_system = firebase.auth()
 var current_page = ""
 const page_ref_dict = {
@@ -66,3 +68,4 @@ function init_nav_bar(){
   </div>
   </nav>`
 }
+

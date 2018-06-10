@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>PetService - Services </title>
+
+  <!--  Firebase stuff  -->
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCQ8zPyKTCBUnbgTUn3AFtov-gNpzNoRXc",
+      authDomain: "petservice-11905.firebaseapp.com",
+      databaseURL: "https://petservice-11905.firebaseio.com",
+      projectId: "petservice-11905",
+      storageBucket: "petservice-11905.appspot.com",
+      messagingSenderId: "261768666522"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark secondary-color">
+        <a class="navbar-brand" href="#">Houston's Pet Service Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Pet Sitting</a>
+                        <a class="dropdown-item" href="#">Dog Walking</a>
+                        <a class="dropdown-item" href="#">Adoptions</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+      </nav>
+        <div class="d-flex flex-row absolute justify-content-center">
+        <h5 class="pt-4">Houston's Pet Service Hub</h5>
+    </div>
+
+    <!--Start of Filters-->
+
+    <div class="d-flex flex-row">
+    <div class="flex-column ml-2">
+          <h2 class="filter-head">Sort by</h2>
+          <p>
+            <a href="#">Pay</a>
+          </p>
+          <p>
+            <a href="#">Distance</a>
+          </p>
+    </div>
+
+        <div class="flex-column form-group ml-1 pl-4">
+                    <h1 class="filter-head">Daily Pay</h1>
+                    <div class="checkbox"><label><input type="checkbox" rel="category-one"/><$20</label></div>
+                    <div class="checkbox"><label><input type="checkbox" rel="category-two"/>$20-$24</label></div>
+                    <div class="checkbox"><label><input type="checkbox" rel="category-three"/>$25-29</label></div>
+                    <div class="checkbox"><label><input type="checkbox" rel="category-three"/>$30+</label></div>
+                  </div>
+                  <div class="flex-column pl-4">
+                    <h1 class="filter-head">Service</h1>
+                    <div class="checkbox"><label><input type="checkbox" rel="topic-one">Pet-sitting</label></div>
+                    <div class="checkbox"><label><input type="checkbox" rel="topic-two">Dog-walking</label></div>
+                    <div class="checkbox"><label><input type="checkbox" rel="topic-three">Adoptions</label></div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+
+
+
+    <!--Posts and Maps-->
+
+
+    <!-- Start of Posts -->
+    <section class="my-5">
+
+    <div id="post_header" class="card-header border-0 font-weight-bold" style="width:500px">
+        <ul class="d-flex flex-row justify-content-start list-unstyled mb-0">
+        <li class="purple-text mr-4 mb-0">"Need a mate for my love."</li>
+      </ul>
+    </div>
+  
+    <div class="media d-flex mt-4 px-1" style="width:500px">
+      <img class="card-img-100 z-depth-1 mr-3" style="width:150px" src="https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/165/113/86509613.jpg" alt="pet image">
+      <div class="media-body flex-column">
+        <h3 class="font-weight-bold mt-0 posts-name">Sandy</h3>
+        <p class="font-weight-bold">Pet-sitting</p>
+        <p class="mr-4 mb-0">Houston, TX 77098</p>
+        <p class="mr-4 mb-0">takbar@rice.edu</p>
+        <p class="mr-4 mb-0">713-545-7755</p>
+        <p id="post_description" class="pt-2"> Hi, my name is Tiffany Akbar.  After starting a new shift as an ED RN, I need someone to look after my beloved bird, Sandy, overnight on MWF.  Feeding her is also required...
+            </p>
+        </div>
+    <div class="flex-column">
+        <h4 class="purple-text">$34</h4>
+        <p class="">nightly</p>
+    </div>
+
+</section>
+
+<section class="my-5">
+
+        <!-- Card header -->
+        <div id="post_header" class="card-header border-0 font-weight-bold" style="width:500px">
+            <ul class="d-flex flex-row justify-content-start list-unstyled mb-0">
+            <li class="purple-text mr-4 mb-0">"2-year-old schnauzer for new home."</li>
+          </ul>
+        </div>
+      
+        <div class="media d-flex mt-4 px-1" style="width:500px">
+          <img class="card-img-100 z-depth-1 mr-3" style="width:150px" src="IMG_0096.JPG" alt="pet image">
+          <div class="media-body flex-column">
+            <h3 class="font-weight-bold mt-0 posts-name">Freddy</h3>
+            <p class="font-weight-bold">Pet-sitting, adoptions</p>
+            <p class="mr-4 mb-0">Houston, TX 77004</p>
+            <p class="mr-4 mb-0">kgarza13@gmail.com</p>
+            <p class="mr-4 mb-0">713-725-9006</p>
+            <p id="post_description" class="pt-2">  Krista here.  Our 2-year-old schnauzer needs nightly sitting while my husband and I are staying in a one-bedroom.  At some point we would also like for him to find a new home...
+                </p>
+            </div>
+        <div class="flex-column">
+            <h4 class="purple-text">$28</h4>
+            <p class="">nightly</p>
+        </div>
+    
+        
+        
+    </section>
+
+    <section class="my-5">
+
+            <!-- Card header -->
+            <div id="post_header" class="card-header border-0 font-weight-bold" style="width:500px">
+                <ul class="d-flex flex-row justify-content-start list-unstyled mb-0">
+                <li class="purple-text mr-4 mb-0">"Cutie needs walk."</li>
+              </ul>
+            </div>
+          
+            <div class="media d-flex mt-4 px-1" style="width:500px">
+              <img class="card-img-100 z-depth-1 mr-3" style="width:150px" src="dachshund-2975210_1280.jpg" alt="pet image">
+              <div class="media-body flex-column">
+                <h3 class="font-weight-bold mt-0 posts-name">Jupiter</h3>
+                <p class="font-weight-bold">Dog-walking</p>
+                <p class="mr-4 mb-0">Houston, TX 77025</p>
+                <p class="mr-4 mb-0">memica2012@uh.edu</p>
+                <p class="mr-4 mb-0">832-991-0015</p>
+                <p id="post_description" class="pt-2">  My dachsund is well cared for, but I'd like to get another walk in on the weekends.  He's fast, alert...
+                    </p>
+                </div>
+            <div class="flex-column">
+                <h4 class="purple-text">$21</h4>
+                <p class="">hourly</p>
+            </div>
+        
+</section>
+
+</body>
+
+  <!-- Jquery Cdn -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Custom site JS -->
+  <script src="static/js/site.js"></script>
+</html>

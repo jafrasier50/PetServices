@@ -1,11 +1,10 @@
 
 // global variables go here
 const database = firebase.database().ref()
-
+var storage = firebase.storage().ref()
 const user_profiles = database.child("user_profiles")
 const auth_system = firebase.auth()
 
-var storage = firebase.storage().ref()
 
 setTimeout(function() {
 

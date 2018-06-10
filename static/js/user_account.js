@@ -1,10 +1,10 @@
-let user
 let user_profile
+
 setTimeout(function() {
 
   user = auth_system.currentUser
-  var user_profile_key = get_user_profile(user.uid)
-  console.log(user_profile_key)
+  get_user_profile(user.uid)
+
 
 },1000)
 
@@ -18,60 +18,44 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-
 function get_user_profile(userID){
   user_profiles.orderByChild('user').equalTo(userID).once("value", function (snap){
-    console.log(snap.val())
-  }).then((data)=>{
-    console.log(data.data)
 
-    if (data.numChildren() == 1){
-      data.forEach((obj) => {
-        user_profile = obj
-      })
-    }
+    console.log(snap.val())
+  }).then(function(data){
+    data.forEach(function(user){
+      user_profile = user.val()
+    })
+    
   })
 }
 
-let user_images = storage.child("user_images")
-
-function upload_file_to_firebase(files){
-  // files.forEach((file)=>{
-    console.log(files)
-  // })
-}
-
-function processSelectedFiles(fileInput) {
-  var files= fileInput.files;
-  upload_file_to_firebase(files)
-  // user_images.put(file).then(function(snapshot){
-  //   console.log("File Uploaded")
-  // })
 
 
-}
 
+// // update and objects fields add new ones or update existing ones
+// // make a dictionary of the fields and their values
 
-// function processSelectedFiles(fileInput) {
-//   var files = fileInput.files;
+// // updateFields = {
+// //   field1 : "value",
+// //   field2 : false,
+//     // ...... and so on
+// // }
 
-//   for (var i = 0; i < files.length; i++) {
-//     alert("Filename " + files[i].name);
-//   }
+// // then just point to it and call update and pass the updateFields obj
+// // firebaseObjRef.update(updateFields)
+
+// let profileimg_url
+// get_profile_img_url(user,imgFormat)
+// new_user_profile["profile_img_url"] = profileimg_url
+// function get_profile_img_url(user, imgFormat){
+//   profileimgRef = storage.child("images/users/"+user.uid+"/profileimg"+"."+imgFormat)
+//   profileimgRef.getDownloadURL().then(function(url){
+//     profileimg_url = url
+//     console.log("this is the img url: "+profileimg_url)
+//     console.log("this is the url from promise:" +url)
+//   }).catch((error)=>{
+//     console.log(error)
+//   })
+
 // }
-
-
-
-
-
-// update and objects fields add new ones or update existing ones
-// make a dictionary of the fields and their values
-
-// updateFields = {
-//   field1 : "value",
-//   field2 : false,
-    // ...... and so on
-// }
-
-// then just point to it and call update and pass the updateFields obj
-// firebaseObjRef.update(updateFields)

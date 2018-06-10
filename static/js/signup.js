@@ -1,7 +1,7 @@
 
 
 
-let fileInput = document.getElementById("pet_profile_pic")
+let fileInput = document.getElementById("myfileinput")
 let emailInput = $("#emailInput")
 let passInput = $("#passInput")
 let confirm_passInput = $("#confirm_passInput")
@@ -47,7 +47,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     inputState = inputState_input.val()
     inputZip = inputZip_input.val()
     add_new_user_proile(user, first_name, last_name, inputAddress, inputAddress2, inputCity, inputState, inputZip)
-    console.log("StopHere")
+    // window.location = "user_account.html"
 
 
   } else {
@@ -87,8 +87,7 @@ function add_new_user_proile(user, first_name, last_name, inputAddress, inputAdd
         console.log("this is geocode working:" + cords.lat)
         new_user_profile["cords"] = cords
         current_user_profile["cords"] = cords
-        let imgFormat = get_image_format(fileInput)
-        console.log("This is the image format: " + imgFormat)
+        console.log("This is the image format: ")
         profile_img_url = upload_profile_pic(user)
 
       })
@@ -102,12 +101,6 @@ function add_new_user_proile(user, first_name, last_name, inputAddress, inputAdd
 }
 
 
-function get_image_format(fileInput){
-  spiltPath = fileInput.value.split("\\")
-  image_format = spiltPath[spiltPath.length - 1].split(".")[1]
-  console.log(image_format)
-  return image_format
-}
 
 function make_user_address(inputAddress, inputAddress2, inputCity, inputState, inputZip){
   if(inputAddress2 == ""){
@@ -125,7 +118,7 @@ function make_user_address(inputAddress, inputAddress2, inputCity, inputState, i
 
 function upload_profile_pic(user){
 
-  files = pet_profile_pic.files
+  files = myfileinput.files
   allowedFileTypes = ["image/png", "image/jpeg", "image/gif", "image/jpg"]
   for (i=0; i< files.length; i++){
     if(allowedFileTypes.indexOf(files[i].type) > -1){
@@ -170,18 +163,13 @@ function upload_profile_pic(user){
 
           console.log('File available at', downloadURL);
           current_user_profile["profile_img_url"] = downloadURL
+          console.log(current_user_profile["profile_img_url"])
 
           updates[new_user_key] = current_user_profile
           user_profiles.update(updates)
-          window.location = "user_account.html"
+          // window.location = "user_account.html"
         });
       });
-  //     .catch((error)=>{
-  //       console.log("This is a pic upload error:" + error)
-  //     })
-  //   }else{
-  //       alert("The image is of invalid format. Only .png .jpeg and .gif are allowed")
-  //   }
-  // }
+ 
 }
   }}

@@ -7,6 +7,7 @@ const pet_profiles = database.child("pet_profiles")
 const auth_system = firebase.auth()
 const database_images = storage.child("images")
 
+
 setTimeout(function() {
 
   var user = auth_system.currentUser
@@ -26,3 +27,21 @@ function home_page_script(user){
 
   }
 }
+
+
+
+
+
+
+
+function make_user_address(inputAddress, inputAddress2, inputCity, inputState, inputZip){
+  if(inputAddress2 == ""){
+    let userAddress = inputAddress+","+inputCity+","+inputState+","+inputZip
+    return userAddress
+  }else{
+    let userAddress = inputAddress+","+inputAddress2+","+inputCity+","+inputState+","+inputZip
+    return userAddress
+  }
+}
+
+

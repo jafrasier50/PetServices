@@ -145,11 +145,13 @@ function upload_profile_pic(user,new_pet_key,pet_profile_pic_input){
 
 
 function pet_observers(){
-  pet_profiles.orderByChild("user").equalTo("YoKgzNUzybOShM88sVuCJIX8qWj1").on("value",function(snapshot){
+  console.log("Pet_boservers were called")
+  pet_profiles.orderByChild("user").equalTo(user.uid).on("value",function(snapshot){
     pets = []
     for(let key in snapshot.val()){
       let pet_item = snapshot.val()[key]
       pets.push(pet_item)
+      console.log("pets are being observered")
     }
     update_pets_list(pets)
   })

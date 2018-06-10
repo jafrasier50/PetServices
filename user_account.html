@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
   <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
   </head>
 <body>
@@ -42,13 +43,130 @@
 </nav>
 </div>
 <div class="container" id="user_account_settings">
+
+
+    <div class="col col-md-6 mt-4">
+
+      <div class="card">
+        <h5 class="card-header" id="user_name_heading">Hello Abdullah Saeed</h5>
+        <div class="card-body row">
+          <div class="col-md-6" id="profile_img">
+            
+          </div>
+          <div class="col col-md-6">
+            <h5 class="card-title">What whould you like to do???</h5>
+            <p class="card-text">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_new_pet_modal">
+                    Add a new pet  
+                  </button>
+            </p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add_new_post_modal">
+                Make a new post
+              </button>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
     
-   
+
+
+        <div id = "pets_list">
+            
+        </div>
+
+
+
+    <!-- Button trigger modal -->
+
+  
+      <!-- Modal Post -->
+      <div class="modal fade" id="add_new_post_modal" tabindex="-1" role="dialog" aria-labelledby="add_new_post_modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="add_new_post_modalLabel">Add a new Post</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              .................
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      <!-- add new pet Modal -->
+      <div class="modal fade" id="add_new_pet_modal" tabindex="-1" role="dialog" aria-labelledby="add_new_pet_modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="add_new_pet_modalTitle"> Add a new pet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                       <!--Header-->
+        <div class="form-header rounded login-header">
+            <h3><i class="fa fa-paw"></i>Add new Pet:</h3>
+          </div>
+          <form>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="pet_profile_pic">Pets Image</label>
+                  <input type="file" class="form-control" name="pet_profile_pic" id="pet_profile_pic" placeholder="Choose a profile pic">
+                </div>
+            </div>
+            <div class="form-row">
+              <label for="pet_name">Pet Name</label>
+              <input type="text" id="pet_name" class="form-control" placeholder="Pet Name">
+        
+
+                    <label for="pet_type">Pet Type</label>
+                    <select class="form-control" id="pet_type">
+                      <option value="Cat">Cat</option>
+                      <option value="Dog">Dog</option>
+                      <option value="Exotic">Exotic</option>
+                    </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="pet_description">Tell us a little about the pet</label>
+                <textarea class="form-control" id="pet_description" rows="4"></textarea>
+              </div>
+
+
+<!--            
+            <div class="form-group">
+            <button type="button" id="signup_btn" class="btn btn-primary">Sign Up</button> -->
+          </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" id="save_pet_btn" class="btn btn-primary">Save changes</button>
+              <script src="pleasework.js">
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
 
 </body>
 
   
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
 
   <!-- Jquery Cdn -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

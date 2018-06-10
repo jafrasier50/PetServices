@@ -1,10 +1,11 @@
 
 // global variables go here
 const database = firebase.database().ref()
-var storage = firebase.storage().ref()
+const storage = firebase.storage().ref()
 const user_profiles = database.child("user_profiles")
+const pet_profiles = database.child("pet_profiles")
 const auth_system = firebase.auth()
-
+const database_images = storage.child("images")
 
 setTimeout(function() {
 
@@ -17,12 +18,11 @@ function home_page_script(user){
   if (user == null ){
     $("#login_link").removeClass().addClass("show_this nav-item")
     $("#logout_link").removeClass().addClass("hide_this nav-item")
-    
+
   }else{
     $("#login_link").removeClass().addClass("hide_this nav-item")
     $("#logout_link").removeClass().addClass("show_this nav-item")
     $("#account_manage_link").removeClass().addClass("show_this nav-item")
-    
+
   }
 }
-

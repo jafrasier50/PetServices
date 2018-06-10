@@ -1,7 +1,7 @@
-let database_images = storage.child("images")
 
 
-let fileInput = document.getElementById("myfileinput")
+
+let fileInput = document.getElementById("pet_profile_pic")
 let emailInput = $("#emailInput")
 let passInput = $("#passInput")
 let confirm_passInput = $("#confirm_passInput")
@@ -29,7 +29,7 @@ signup_btn.click(()=>{
       alert(errorMessage)
 
     });
-    
+
   }else{
     //passwords dont match
     alert("password do not match please make sure they are the same. I bet your pet could have done this and not F*****d up this bad.")
@@ -48,7 +48,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     inputZip = inputZip_input.val()
     add_new_user_proile(user, first_name, last_name, inputAddress, inputAddress2, inputCity, inputState, inputZip)
     console.log("StopHere")
-    
+
 
   } else {
 
@@ -69,10 +69,10 @@ function add_new_user_proile(user, first_name, last_name, inputAddress, inputAdd
     inputZip : inputZip,
 
   }
-  
+
   current_user_profile = new_user_profile
 	new_user_key = user_profiles.push().key
-  
+
   new_user_profile["pk"]=new_user_key
   userAddress = make_user_address(inputAddress, inputAddress2, inputCity, inputState, inputZip)
   axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
@@ -86,19 +86,19 @@ function add_new_user_proile(user, first_name, last_name, inputAddress, inputAdd
         cords = response.data.results["0"].geometry.location
         console.log("this is geocode working:" + cords.lat)
         new_user_profile["cords"] = cords
-        current_user_profile["cords"] = cords 
+        current_user_profile["cords"] = cords
         let imgFormat = get_image_format(fileInput)
         console.log("This is the image format: " + imgFormat)
-        profile_img_url = upload_profile_pic(user,imgFormat)
-      
-      })      
+        profile_img_url = upload_profile_pic(user)
+
+      })
         .catch(function(error){
         console.log(error);
       })
-                
-    
-  
-  
+
+
+
+
 }
 
 
@@ -121,33 +121,16 @@ function make_user_address(inputAddress, inputAddress2, inputCity, inputState, i
 
 
 
-// function upload_profile_pic(user,imgFormat){
-
-//   files = myfileinput.files
-//   allowedFileTypes = ["image/png", "image/jpeg", "image/gif", "image/jpg"]
-//   for (i=0; i< files.length; i++){
-//     if(allowedFileTypes.indexOf(files[i].type) > -1){
-//       let file = files[i]
-      
-//       storage.child("images/users/"+user.uid+"/profileimg"+"."+imgFormat).put(file)
-//       .catch((error)=>{
-//         console.log("This is a pic upload error:" + error)
-//       })
-//     }else{
-//         alert("The image is of invalid format. Only .png .jpeg and .gif are allowed")
-//     }
-//   }
-// }
 
 
-function upload_profile_pic(user,imgFormat){
+function upload_profile_pic(user){
 
-  files = myfileinput.files
+  files = pet_profile_pic.files
   allowedFileTypes = ["image/png", "image/jpeg", "image/gif", "image/jpg"]
   for (i=0; i< files.length; i++){
     if(allowedFileTypes.indexOf(files[i].type) > -1){
       let file = files[i]
-      
+
       let uploadTask = storage.child("images/users/"+user.uid+"/"+file.name).put(file)
       uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
         function(snapshot) {
@@ -187,7 +170,7 @@ function upload_profile_pic(user,imgFormat){
 
           console.log('File available at', downloadURL);
           current_user_profile["profile_img_url"] = downloadURL
-        
+
           updates[new_user_key] = current_user_profile
           user_profiles.update(updates)
           window.location = "user_account.html"

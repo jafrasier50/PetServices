@@ -29,3 +29,99 @@ border-bottom: 1px solid rgb(128, 0, 113);
 .md-form input[type=date]:hover, .md-form input[type=datetime-local]:hover, .md-form input[type=email]:hover, .md-form input[type=number]:hover, .md-form input[type=password]:hover, .md-form input[type=search-md]:hover, .md-form input[type=search]:hover, .md-form input[type=tel]:hover, .md-form input[type=text]:hover, .md-form input[type=time]:hover, .md-form input[type=url]:hover, .md-form textarea.md-textarea:hover{
   border-bottom: 1px solid rgb(128, 0, 113);
 }
+
+.forget {
+
+  font-size: 1rem;
+  color:   rgb(128, 0, 128);
+  text-align: end;
+}
+
+.pass {
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  font-family:  Roboto, sans-serif;
+}
+
+.btn-style {
+  border: 1px solid  rgb(128, 0, 113);
+  background-color: transparent;
+  color:  rgb(128, 0, 113);
+  font-size: .75rem;
+  width: max-content;
+
+}
+
+
+.posts-name {
+
+  color: rgb(0, 94, 255);
+}
+    
+    .box {
+      margin-bottom: 50px;
+
+    }
+      
+      .results {
+        padding: 15px;
+        border-radius: 5px;      
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+        background: #fff;
+      }
+      
+      .well {
+        margin-bottom: 0;
+      }
+      
+      .arrow {
+        position: relative;
+        top: 0;
+      }
+    
+    .filter {
+      padding: 15px;
+      border-radius: 5px;      
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+      background: #fff;
+    }
+
+
+    .filter-head {
+
+      font-size: 1.5rem;
+      color: rgb(0, 94, 255);
+    }
+
+
+    /* For width between 481px and 800px: */
+
+@media only screen and (min-width:481px) and (max-width:800px)  {
+  body {
+    background-color: snow;
+    font-size: 16px;
+    color: black;
+    font-family: cursive;
+    font-size: small;
+    font-weight: 500;
+  }
+  p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: smaller;
+    font-weight: 400;
+    display: block;
+}
+
+    h3 {
+    font-family: cursive;
+    font-weight: 800;
+    display: block;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+}

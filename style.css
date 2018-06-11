@@ -95,33 +95,3 @@ border-bottom: 1px solid rgb(128, 0, 113);
       color: rgb(0, 94, 255);
     }
 
-
-    /* For width between 481px and 800px: */
-
-@media only screen and (min-width:481px) and (max-width:800px)  {
-  body {
-    background-color: snow;
-    font-size: 16px;
-    color: black;
-    font-family: cursive;
-    font-size: small;
-    font-weight: 500;
-  }
-  p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: smaller;
-    font-weight: 400;
-    display: block;
-}
-
-    h3 {
-    font-family: cursive;
-    font-weight: 800;
-    display: block;
-}
-
-img {
-    width: 50%;
-    height: auto;
-}
-}
